@@ -1,0 +1,21 @@
+@import "../sass/outils/variables.scss" ;
+@import "../sass/outils/mixins.scss" ;
+
+@media ( min-width : 768 px ) {
+    header{
+        display: flex ;
+        flex-direction: column ;
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            width: 70px;
+        }
+        .navbar{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@media (min-width: 768 px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header .logo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 70px;
+  }
+  header .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
