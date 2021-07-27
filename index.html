@@ -4,23 +4,27 @@
     <head>
         <meta charset="utf-8"/>
         <title>Ohmyfood</title>
-        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
 
     </head>
 
     <body>
         <header class="header">
-            <img class="header__logo" src="maquettes_ohmyfood/images/logo/ohmyfood@2x.svg" alt="le logo de ohmyfood">
+            <div class="header__logo">
+            <img class="header__logo--img" src="./maquettes_ohmyfood/images/logo/ohmyfood@2x.svg" alt="le logo de ohmyfood">
+            </div>
         
             <div class="header__nav">
                 <div class="header__nav--location">
-                    <i class="fas fa-map-marker-alt fa-lg"></i>
-                    <p>Paris, Belleville</p>
+                    <span class="icon_location"><i class="fas fa-map-marker-alt"></i></span>
+                    <h2 class="paris_location">Paris, Belleville</h2>
                 </div>
 
-                <div id="header__nav--explore">
-                    <h1>Réservez le menu qui vous convient</h1>
-                    <h3>Découvrez des restaurants d'exception, <br> sélectionnés par nos soins,</h3>
+                <div class="header__nav--explore">
+                    <h1>Réservez le menu qui</h1>
+                    <h1>vous convient</h1>
+                    <h3>Découvrez des restaurants d'exception</h3>
+                    <h3>sélectionnés par nos soins,</h3>
                     <button>Explorer nos restaurants</button>
                 </div>
             </div>
