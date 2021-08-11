@@ -1,5 +1,6 @@
 body {
   font-family: "sans" sans-serif;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -105,25 +106,35 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 100px;
     background-color: #f2f2f2;
   }
   .restaurants h2 {
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: bold;
     margin-left: 30px;
   }
-  .restaurants__card-link {
+  .restaurants__list {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    border: solid 1px #f2f2f2;
-    margin: 0px 30px;
-    border-radius: 10px;
+    justify-content: space-between;
   }
-  .restaurants__card-link--header {
+  .restaurants__list--card-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 50px;
+    border-radius: 20px;
+  }
+  .restaurants__list--card-link a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000;
+  }
+  .restaurants__list--card-link a .header-box {
     display: flex;
   }
-  .restaurants__card-link--header img {
+  .restaurants__list--card-link a .header-box img {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
@@ -133,33 +144,33 @@ body {
     position: relative;
     z-index: 1;
   }
-  .restaurants__card-link--header span {
-    font-size: 50px;
+  .restaurants__list--card-link a .header-box span {
     position: absolute;
-    width: 95%;
-    z-index: 2;
+    font-size: 25px;
     display: flex;
     justify-content: flex-end;
   }
-  .restaurants__card-link--footer {
+  .restaurants__list--card-link a .footer-box {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
     padding-left: 20px;
     justify-content: space-between;
     background-color: #fff;
+    border-radius: 30px;
   }
-  .restaurants__card-link--footer h3 {
-    font-size: 60px;
+  .restaurants__list--card-link a .footer-box h3 {
+    font-family: "Roboto";
     font-weight: bold;
+    font-size: 50px;
     margin: 0;
     width: 85%;
   }
-  .restaurants__card-link--footer span {
-    font-size: 30px;
+  .restaurants__list--card-link a .footer-box p {
+    font-size: 50px;
   }
-  .restaurants__card-link--footer p {
-    font-size: 60px;
+  .restaurants__list--card-link a .footer-box i {
+    font-size: 50px;
   }
 
   .footer {
