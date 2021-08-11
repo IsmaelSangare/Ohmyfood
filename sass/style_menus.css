@@ -78,6 +78,7 @@ body {
     background-color: #fff;
     margin: 30px;
     border-radius: 20px;
+    padding: 0px;
   }
   .menu-principal .menu-container .menu-bloc__header {
     display: flex;
