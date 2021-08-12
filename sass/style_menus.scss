@@ -13,94 +13,19 @@ body{
 @media screen and (min-width: 667px) {
     header{
         display: flex;
-        flex-direction: column;
-        & .header-menu{
+        flex-direction: row;
+        justify-content: center;
+        &__menu{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-right: 250px;
-            & i {
-                font-size: 50px;
-                color: #4a4a4a;
-                margin-top: 45px;
-                padding-right: 200px;
-                
-                
+            &--icon{
+                font-size: 20px;
             }
-            & img{
-                width: 350px;
-                height: 150px;
-                align-items: center;
+            &--logo{
+                width: 380px;
             }
-            
         }
-        & .photo-menu {
-            position: relative;
-            width: 100%;
-            object-fit: cover;
-            height: 500px;
-        }
+
     }
-
-    .menu-principal{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color:$background-color ;
-        z-index: 2;
-        position: relative;
-        width: 100%;
-        top: -30px;
-        border-radius: 60px;
-        &__title{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 50px;
-            & h1{
-                
-                font-size: 100px;
-                font-weight: bolder;
-            }
-            & i {
-                font-size: 50px;
-                background-color: $background-color;
-            }
-        }
-        & .menu-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            & h2 {
-                font-size: 40px;
-            }
-            & .menu-bloc{
-                display: flex;
-                flex-direction: column;
-                align-content: center;
-                font-size:40px ;
-                border: solid 1px;
-                background-color: #fff;
-                margin: 30px;
-                border-radius: 20px;
-                padding: 0px;
-                &__header{
-                    display: flex;
-                    & h3{
-                        font-size: 40px;
-                    }
-                }
-                &__footer{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                }
-            }
-            
-        }
-    }
-
-
-    
-
 }
