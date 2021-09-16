@@ -37,6 +37,7 @@
   transition: transform 500ms ease-in-out;
   padding-right: 10px;
   padding-left: 10px;
+  
   & .fa-check-circle {
     color: #fff;
     transition: transform 700ms ease-in-out;
@@ -46,19 +47,11 @@
   }
 }
 
-@mixin loader {
-  color: $tertiary-color;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  animation: loaderbg 2s;
+// MIXIN FLEXBOX
+@mixin flexbox($dir, $justify, $align, $wrap){ 
   display: flex;
-  justify-content: center;
-  i.fas.fa-sync.fa-10x{
-    top: 40%;
-    position: absolute;
-    animation: chargement 2s ease-in-out;
-    opacity: 0;
-    color: $tertiary-color;
-  }
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
 }
