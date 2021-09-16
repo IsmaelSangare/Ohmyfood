@@ -1,0 +1,256 @@
+@import "../sass/outils/variables.scss" ;
+@import "../sass/outils/mixins.scss" ;
+@import "../sass/outils/heart-icon.scss";
+
+
+
+@media screen and (min-width: 667px) {
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff ;
+        align-items: center;
+        border-bottom: solid 4px gray;
+        & img {
+            width: 400px; 
+            height: 200px;
+        }
+
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        & .search_bar{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: #BCD6E3;
+            font-size: 30px;
+            & span{
+                align-self: center;
+                padding-right: 10px;
+            }
+            & h2{
+                padding-left: 10px;
+            }
+        }
+
+        & .intro{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $background-color;
+            padding-bottom: 60px;
+            &__container{
+                display: flex;
+                flex-direction: column;
+                align-items:  center;
+                & h1 {
+                    font-size: 65px; 
+                    text-align: center;
+                    font-weight: bold;
+                    margin: 40px 15% 0 15%;
+                    text-align: center;
+                    
+                }
+                & p{
+                    font-size: 50px;
+                    color: #BCD6E3;
+                    text-align: center;
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    margin-top: 15px;
+                }
+                & button{
+                    display: flex;
+                    margin-bottom: 150px;
+                    font-size: 40px;
+                    padding: 20px;
+                    
+                    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+                    border: none;
+                    color: white;
+                    border-radius: 50px;
+                    box-shadow: -1px 2px 10px 0px rgba(92, 92, 92, 0.65);
+                    cursor: pointer;
+                    transition-duration: 400ms;
+                }
+            }
+        }
+
+        & .fonctionnements{
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            justify-content: center;
+            padding-bottom: 100px;
+            & h2{
+                font-size: 60px;
+                margin-left: 30px;
+            }
+            
+            &__container{
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: max-content;
+                justify-content: space-around;
+                padding-bottom: 0;
+                
+                &--item{
+                    
+                    display: flex;
+                    background-color: $background-color;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    border-radius: 30px;
+                    box-shadow: -1px 2px 15px 0px rgba(92, 92, 92, 0.45);
+                    width: 95%;
+                    margin: 30px;
+                    & span{
+                        position: relative;
+                        background-color: $primary-color;
+                        font-size: 40px;
+                        padding: 12px;
+                        padding-left: 24px;
+                        padding-right: 24px;
+                        border-radius: 60px;
+                        color: white;
+                        font-family: "Roboto";
+                        right: 15px;
+                        
+                    }
+                    & i{
+                        align-self: center;
+                        font-size: 40px;
+                        margin-left: 40px;
+                    }
+                    & h4 {
+                        font-size: 40px;
+                        align-self: center;
+                        text-align: start;
+                        width: 70%;
+                        margin-left: 40px;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
+                    
+                }
+            }
+        }
+
+        & .restaurants{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: $background-color;
+            & h2{
+                font-size: 60px;
+                margin-left: 30px;
+            }
+            &__container{
+                display: flex;
+                flex-direction: column;
+                &--card{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 30px;  
+                    box-shadow: 5px 4px 8px 2px #e6e6e6;
+                    border-radius: 25px; 
+                    
+                    & a {
+                        text-decoration: none;
+                        border: solid 1px #fff;
+                    
+                        & .header-box{
+                            position: relative;
+                            & .new{
+                                position: absolute;
+                                font-size: 25px;
+                                top: 15px;
+                                right: 15px;
+                                padding: 8px 15px;
+                                background-color: #99E2D0;
+                                color: #139273;
+                                font-weight: 700;
+                                border-radius: 4px;
+                            }
+                            & img{
+                                height: 400px;
+                                width: 100%;
+                                object-fit: cover;
+                                border-top-left-radius: 25px;
+                                border-top-right-radius: 25px;
+                            }
+                
+                            
+                        }
+
+                        & .footer-box{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            background-color:#fff;
+                            border-bottom-left-radius: 25px;
+                            border-bottom-right-radius: 25px;
+                            & h3 {
+                                font-weight: bold;
+                                font-size:  50px;
+                                margin: 0;
+                                width: 85%;
+                                padding-top: 30px;
+                                padding-left: 30px;
+                                color: #000;
+                                
+                            }
+
+                            & h4 {
+                                font-size: 40px;
+                                margin-top: 5px;
+                                margin-bottom: 30px;
+                                width: 100%;
+                                padding-left: 30px;
+                                color: #000;
+                                
+                            } 
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+      
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding-top:50px ;
+        background-color: black;
+        & h1{
+          font-size: 70px;
+          color: white;
+          margin-left: 30px;
+        }
+        & ul{
+            display: flex;
+            flex-direction: column;
+            & li{
+                font-size: 50px;
+                list-style: none;
+                margin-bottom: 50px;
+                color: #fff; 
+            }
+            
+        }
+    }
+
+        
+    
+    
+}
