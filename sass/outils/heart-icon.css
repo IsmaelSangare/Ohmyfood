@@ -44,6 +44,6 @@
   transition: transform 1.5s ease-out;
 }
 
-.menu-heading .heart-icon--empty, .menu-heading .heart-icon--full::after {
+.big-title .heart-icon--empty, .big-title .heart-icon--full::after {
   background: #f2f2f2;
 }/*# sourceMappingURL=heart-icon.css.map */
