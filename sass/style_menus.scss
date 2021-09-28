@@ -1,11 +1,11 @@
 @import "../sass/outils/variables.scss" ;
 @import "../sass/outils/mixins.scss" ;
-@import "../sass/loader.scss";
 
 body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: $background-color;
     
 }
 
@@ -23,6 +23,7 @@ header{
 
 .image-card{
     display: flex;
+    background-color: $background-color;
     & .photo-plat{
         height: 400px;
         object-fit: cover;
@@ -32,6 +33,7 @@ header{
 .big-title{
     display: flex;
     flex-direction: row;
+    background-color: $background-color;
     & .title{
         display: flex;
         flex-direction: row;
@@ -52,27 +54,19 @@ header{
     top: -30px;
     width: 100%;
     border-radius: 30px;
-    & .entree{
-        animation: fadein 1000ms ease-in-out;
-        & .titre{
-            align-self: center;
-        }
+    & .menu-content{
+        animation: menu-fadein ease-in-out 1000ms forwards; 
+        opacity:0;
+        @for $i from 1 through 3 {
+        &--#{$i} {
+        animation-delay: 400ms * $i;
     }
-
-    & .plat{
-        animation: fadein 1000ms ease-in-out;
-        & .titre{
-            align-self: center;
-        }
+} 
     }
-
-    & .dessert{
-        animation: fadein 1000ms ease-in-out;
-        & .titre{
-            align-self: center;
-        }
-    }
+   
 }
+
+
 
 .menu-bloc{
     background-color: #fff;
@@ -155,6 +149,8 @@ header{
 
 
 
+
+
 @media screen and (min-width: 667px) {
 
     header{
@@ -190,6 +186,7 @@ header{
         & .image-card {
             display: flex;
             border-radius: 20px;
+            background-color: $background-color;
             & img {
                 height: 600px;
                 width: 100%;
@@ -204,28 +201,21 @@ header{
             border-radius: 45px 45px 0 0;
             background-color: $background-color;
             display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            justify-content: space-between;
             & .title{
-                display: flex;
-                flex-direction: row;
-                & h1{
-                    font-size: 60px;
-                    font-family: "Shrikhand", cursive;
-                    flex-direction: row;
-                    margin-left: 20px;
-                    font-weight: bold;
-                    
-                }
-                & .size{
-                    font-size: 50px;
-                }
-                & i {
-                    font-size: 50px;
-                    margin-left: 400px; 
-                    align-self: center;
-                }
+                background-color: $background-color;
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               & .size{
+                   font-family: 'roboto';
+                   font-size: 50px;
+                   padding-right: 50px;
+               }
+               & i {
+                   font-size: 40px;
+                   align-self: center;
+                   padding-left: 50px;
+               }
             }
 
         }
@@ -235,19 +225,28 @@ header{
             flex-direction: column;
             justify-content: space-between;
             background-color: #f6f6f6;
-
+    
+            & .menu-content{
+                animation: menu-fadein ease-in-out 1000ms forwards; 
+                opacity:0;
+                @for $i from 1 through 3 {
+                &--#{$i} {
+                animation-delay: 400ms * $i;
+            }
+        } 
+            }
             & .entree{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between; 
                 & h2{
                     font-size: 50px;
-                    margin-left: 30px;
                     font-family: "Roboto", sans-serif;
                     font-weight: 400;
                     padding-bottom: 10px;
                     border-bottom: 5px solid #99E2D0;
                     width: 12%;
+                    margin-left: 30px;
                     
 
                 }
@@ -265,14 +264,12 @@ header{
                 justify-content: space-between; 
                 & h2{
                     font-size: 50px;
-                    margin-left: 30px;
                     font-family: "Roboto", sans-serif;
                     font-weight: 400;
                     padding-bottom: 10px;
                     border-bottom: 5px solid #99E2D0;
                     width: 12%;
-                    
-
+                    margin-left: 30px;
                 }
 
                 & .menu-bloc{
@@ -287,12 +284,12 @@ header{
                 justify-content: space-between; 
                 & h2{
                     font-size: 50px;
-                    margin-left: 30px;
                     font-family: "Roboto", sans-serif;
                     font-weight: 400;
                     padding-bottom: 10px;
                     border-bottom: 5px solid #99E2D0;
                     width: 12%;
+                    margin-left: 30px;
                     
 
                 }
@@ -350,5 +347,15 @@ header{
             }
             
         }
+    }
+}
+
+@keyframes menu-fadein {
+    0%{
+        opacity:0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
     }
 }

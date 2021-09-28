@@ -49,12 +49,12 @@
           margin-right: 10px;
           font-family: "Roboto";
           font-size: 35px;
-          color: #BDB4B3;
+          color: #4B473D;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
-      }
+        }
 
   }
 
@@ -62,11 +62,11 @@
       display: flex;
       justify-content: space-between;
       & p{
-          font-size: 40px;
-          display: flex;
-          align-items: flex-end;
-          font-weight: 900;
-          margin: 5px 20px -5px 0;
+        margin: 0;
+        font-family: "Roboto";
+        margin-right: 10px;
+        font-weight: 500;
+        font-size: 40px;
       }
 
      
